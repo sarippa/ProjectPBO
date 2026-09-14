@@ -11,18 +11,26 @@ package com.mycompany.sistemtokobuku;
 public class SistemTokoBuku {
 
     public static void main(String[] args) {
-        System.out.println("=== SISTEM TOKO BUKU / PERPUSTAKAAN ===\n");
-
-        Buku buku1 = new Buku("Pemrograman Java Dasar", "Budi Santoso", 85000, 10);
-        Buku buku2 = new Buku("Algoritma & Struktur Data", "Siti Aminah", 95000, 5);
+        System.out.println("                 SISTEM TOKO BUKU                 \n");
+        System.out.println("Shafira Muthia Az-Zahra");
+        System.out.println("2507071009");
+        System.out.println("2507071009@students.unila.ac.id");
+        
+        Buku buku1 = new Buku("Logika", "Shafira Muthia Az-Zahra", 85000, 10);
 
         buku1.tampilkanInfo();
-        buku2.tampilkanInfo();
-
-        System.out.println("\n--- Transaksi ---");
-        buku1.kurangiStok(2);
         
-        System.out.println("\n--- Info Setelah Transaksi ---");
+        System.out.println("================== ENKAPSULASI ===================");
+        
+        buku1.setHarga(95000);
+        System.out.println("Harga terbaru buku " + buku1.getJudul() + " : Rp" + String.format("%,.0f", buku1.getHarga()));
+        
+        buku1.setQty(8);
+        System.out.println("Jumlah terbaru barang " + buku1.getQty());
+        
+        System.out.println("==================================================");
+        
+        System.out.println("------------- INFO SETELAH TRANSAKSI -------------");
         buku1.tampilkanInfo();
     }
 }
