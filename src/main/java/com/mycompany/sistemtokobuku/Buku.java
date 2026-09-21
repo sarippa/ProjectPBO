@@ -9,31 +9,34 @@ package com.mycompany.sistemtokobuku;
  * @author user
  */
 public class Buku {
-    private String judul;
-    private String penulis;
-    private double harga;
-    private int qty;
+    protected String id;
+    protected String judul;
+    protected double harga;
+    protected int qty;
 
-    public Buku(String judul, String penulis, double harga, int qty) {
+    public Buku(String id, String judul, double harga, int qty) {
+        this.id = id;
         this.judul = judul;
-        this.penulis = penulis;
         setHarga(harga);
         setQty(qty);
     }
 
     public void tampilkanInfo() {
         System.out.println("==================================================");
+        System.out.println("ID Buku     : " + this.id);
         System.out.println("Judul Buku  : " + this.judul);
-        System.out.println("Penulis     : " + this.penulis);
         System.out.println("Harga       : Rp" + this.harga);
         System.out.println("Qty         : " + this.qty);
         System.out.println("Total       : Rp" + (this.harga * this.qty));
     }
 
-    public String getJudul() {
-        return judul;
+    public String getId() {
+        return id;
     }
     
+    public String getjudul(){
+        return judul;
+    }
     public double getHarga() {
         return harga;
     }
