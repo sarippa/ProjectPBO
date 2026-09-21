@@ -22,7 +22,6 @@ public class Buku {
     }
 
     public void tampilkanInfo() {
-        System.out.println("==================================================");
         System.out.println("ID Buku     : " + this.id);
         System.out.println("Judul Buku  : " + this.judul);
         System.out.println("Harga       : Rp" + this.harga);
@@ -45,7 +44,7 @@ public class Buku {
         if (harga >= 0) {
             this.harga = harga;
         } else {
-            System.out.println("[ERROR] Masukkan ulang harga!");
+            System.out.println("[ERROR] Harga tidak sesuai! Masukkan ulang harga!");
         }
     }
     
@@ -57,7 +56,7 @@ public class Buku {
         if (qty >= 0) {
             this.qty = qty;
         } else {
-            System.out.println("[ERROR] Stok tidak sesuai! Set default ke 0.");
+            System.out.println("[ERROR] Stok tidak sesuai! Masukan ulang qty!");
         }
     }
 }

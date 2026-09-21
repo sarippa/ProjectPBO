@@ -31,10 +31,14 @@ public class SistemTokoBuku {
                 "Sui Ishida",
                 "Shueisha");
 
+        System.out.println("==================================================");
+        System.out.println("------------------ DATA AWAL ---------------------");
+        System.out.println("==================================================");
         buku1.tampilkanInfo();
-        buku1a.tampilkanInfo();
         
-        System.out.println("================== ENKAPSULASI ===================");
+        System.out.println("==================================================");
+        System.out.println("------------------ ENKAPSULASI -------------------");
+        System.out.println("==================================================");
         
         buku1.setHarga(95000);
         System.out.println("Harga terbaru buku " + buku1.getjudul() + " : Rp" + String.format("%,.0f", buku1.getHarga()));
@@ -42,10 +46,13 @@ public class SistemTokoBuku {
         buku1.setQty(8);
         System.out.println("Jumlah terbaru barang " + buku1.getQty());
         
+        buku1.setHarga(-45000);
+        buku1.setQty (-8);
+        
+        System.out.println("==================================================");
+        System.out.println("------------------ INHERITANCE -------------------");
         System.out.println("==================================================");
         
-        System.out.println("------------- INFO SETELAH TRANSAKSI -------------");
-        buku1.tampilkanInfo();
         buku1a.tampilkanInfo();
     }
 }
